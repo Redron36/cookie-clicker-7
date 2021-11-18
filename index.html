@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cookie Clicker: 7</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Cookie Clicker: 7</h1>
+    <h3>Created By: Az989</h3>
+    <p>Created for a school project.</p>
+    <img src = "images/cookie.png" id = "cookie" style = "width: 150px"  onclick = "increment()" />
+    <br>
+    <img src = "images/powerUp.png" id = "powerUp" style = "width: 150px" onclick = "powerUp()" />
+    <p>Cookies Clicked: <span id = "counter">0</span></p>
+  </body>
+  <script>
+      var cookies = 0;
+      var power = 1;
+      var powerPrice = 10;
+
+      function increment(){ // click cookie make cookie
+          cookies = cookies + power;
+          counter.innerHTML = cookies;
+      }
+
+      function powerUp(){ // 
+          if(cookies >= powerPrice)
+          {
+            power = power + 1;
+            cookies = cookies - powerPrice;
+            counter.innerHTML = cookies;
+          }
+      }
+  </script>
+</html>

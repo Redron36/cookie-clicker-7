@@ -10,18 +10,30 @@
     <h1>Cookie Clicker: 7</h1>
     <h3>Created By: Az989</h3>
     <p>Created for a school project.</p>
-    <p><span id = "counter">0</span> Cookies</p>
+    <p><span id = "counter">0</span> Cookies | <span id ="clickPower">1</span> Power</p>
     <img src = "images/cookie.png" id = "cookie" style = "width: 250px"  onclick = "increment()" />
 
-    <aside>
-    <button type="button" id="buyClick" onclick = "buyClicker()">Buy Clicker</button>
+    <article class="helpers">
+    <p>
+    <button type="button" onclick = "buyClicker()">Buy Clicker</button>
     <p>Clicker Price: 10 | Clickers Owned: <span id= "clickers">0</span></p>
     <br>
-    <button type="button" id="buyGrandma" onclick = "buyGrandma()">Buy Grandma</button>
+    <button type="button" onclick = "buyGrandma()">Buy Grandma</button>
     <p>Grandma Price: 100 | Grandmas Owned: <span id= "grandmas">0</span></p>
-    </aside>
+    <br>
+    <button type="button" onclick = "buyFarm()">Buy Farm</button>
+    <p>Farm Price: 250 | Farms Owned: <span id= "farms">0</span></p>
+    </p>
+    </article>
+
+    <article class="upgrades">
+    <p>
+    <button type="button" onclick = "buyUpgrade()">Upgrade Mouse</button>
+    <p>Upgrade Price: <span id= "upgradePrice">1,000</span></p>
+    </article>
 
   </body>
   <script src="scripts/main.js"></script> <!--main code-->
   <script src="scripts/helper.js"></script> <!--code for helpers--> 
+  <script src="scripts/upgrade.js"></script> <!--code for mouse upgrade-->
 </html>

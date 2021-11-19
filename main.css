@@ -27,10 +27,19 @@ button:hover {
     font-weight: bold;
 }
 
-aside {
+.upgrades {
     position: absolute;
     right: 0px;
     top: 0px;
+    width: 300px;
+    border: 7px solid #dcfff9;
+    padding: 10px;
+}
+
+.helpers {
+    position: absolute;
+    right: 0px;
+    top: 125px;
     width: 300px;
     border: 7px solid #dcfff9;
     padding: 10px;

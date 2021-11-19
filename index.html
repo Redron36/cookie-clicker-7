@@ -10,19 +10,19 @@
     <h1>Cookie Clicker: 7</h1>
     <h3>Created By: Az989</h3>
     <p>Created for a school project.</p>
-    <p><span id = "counter">0</span> Cookies | <span id ="clickPower">1</span> Power</p>
-    <img src = "images/cookie.png" id = "cookie" style = "width: 250px"  onclick = "increment()" />
+    <p><span id = "counter">0</span> Cookies | <span id ="clickPower">1</span> Power | <span id ="cpsCount">0</span> CPS</p>
+    <img src = "images/cookie.png" class = "animation-target" id = "cookie" style = "width: 250px"  onclick = "increment()" />
 
     <article class="helpers">
     <p>
     <button type="button" onclick = "buyClicker()">Buy Clicker</button>
-    <p>Clicker Price: 10 | Clickers Owned: <span id= "clickers">0</span></p>
+    <p>Clicker Price: <span id= "clickerCost">10</span> | Clickers Owned: <span id= "clickers">0</span></p>
     <br>
     <button type="button" onclick = "buyGrandma()">Buy Grandma</button>
-    <p>Grandma Price: 100 | Grandmas Owned: <span id= "grandmas">0</span></p>
+    <p>Grandma Price: <span id= "grandmaCost">100</span> | Grandmas Owned: <span id= "grandmas">0</span></p>
     <br>
     <button type="button" onclick = "buyFarm()">Buy Farm</button>
-    <p>Farm Price: 250 | Farms Owned: <span id= "farms">0</span></p>
+    <p>Farm Price: <span id= "farmCost">250</span> | Farms Owned: <span id= "farms">0</span></p>
     </p>
     </article>
 

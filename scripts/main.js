@@ -1,16 +1,12 @@
-const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello World!';
+// basic cookie stuff
+var cookies = 0;
+var power = 1;
 
-let helpers = [
-    'Cursor',
-    'Grandma',
-    'Farm',
-    'Mine',
-    'Factory',
-    'Bank',
-    'Temple'
-];
+// helpers
+var clicker = 0;
+var grandma = 0;
 
-if (helpers[0]) {
-    alert('Helper is a cursor.');
+function increment() { // click cookie make cookie
+    cookies = cookies + power;
+    counter.innerHTML = cookies;
 }

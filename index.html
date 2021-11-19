@@ -4,36 +4,24 @@
     <meta charset="utf-8">
     <title>Cookie Clicker: 7</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="main.css" rel="stylesheet" type="text/css" >
   </head>
   <body>
     <h1>Cookie Clicker: 7</h1>
     <h3>Created By: Az989</h3>
     <p>Created for a school project.</p>
-    <p>Cookies Clicked: <span id = "counter">0</span></p>
+    <p><span id = "counter">0</span> Cookies</p>
     <img src = "images/cookie.png" id = "cookie" style = "width: 150px"  onclick = "increment()" />
+
+    <aside>
+    <button type="button" id="buyClick" onclick = "buyClicker()">Buy Clicker</button>
+    <p>Clicker Price: 10 | Clickers Owned: <span id= "clickers">0</span></p>
     <br>
-    <img src = "images/powerUp.png" id = "powerUp" style = "width: 150px" onclick = "powerUp()" />
-    <p>Power Upgrade Price: <span id = "pUpPrice">10</span></p>
+    <button type="button" id="buyGrandma" onclick = "buyGrandma()">Buy Grandma</button>
+    <p>Grandma Price: 100 | Grandmas Owned: <span id= "grandmas">0</span></p>
+    </aside>
+
   </body>
-  <script>
-      var cookies = 0;
-      var power = 1;
-      var powerPrice = 10;
-
-      function increment(){ // click cookie make cookie
-          cookies = cookies + power;
-          counter.innerHTML = cookies;
-      }
-
-      function powerUp(){ // 
-          if(cookies >= powerPrice)
-          {
-            power = power + 1;
-            cookies = cookies - powerPrice;
-            powerPrice = Math.round(Math.pow(powerPrice, 1.3));
-            pUpPrice.innerHTML = powerPrice;
-            counter.innerHTML = cookies;
-          }
-      }
-  </script>
+  <script src="scripts/main.js"></script> <!--main code-->
+  <script src="scripts/buy.js"></script> <!--code for buying helpers--> 
 </html>

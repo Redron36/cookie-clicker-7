@@ -28,6 +28,7 @@ button:hover {
 }
 
 .upgrades {
+    font-family: 'Open Sans';
     position: absolute;
     right: 0px;
     top: 0px;
@@ -37,6 +38,7 @@ button:hover {
 }
 
 .helpers {
+    font-family: 'Open Sans';
     position: absolute;
     right: 0px;
     top: 125px;

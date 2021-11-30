@@ -12,11 +12,18 @@ function increment() { // click cookie make cookie
 
     cookies = cookies + power;
     counter.innerHTML = cookies;
+    document.getElementById("numbers").style.textAlign = "center";
+}
+
+function giveCookies() {
+    cookies = cookies + 100000000000;
+    counter.innerHTML = cookies;
 }
 
 window.setInterval(function updateCPS(){
     cps = (clicker * clickerCPS) + (grandma * grandmaCPS) + (farm * farmCPS);
     cpsCount.innerHTML = cps;
+    document.getElementById("numbers").style.textAlign = "center";
 }, 1000);
 
 document.getElementById('cookie').ondragstart = function() { return false; };

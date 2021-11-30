@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 button {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     background-color: #11DCBF;
     border-radius: 8px;
     border: none;
@@ -14,7 +16,7 @@ button {
 }
 
 button:hover {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     background-color: #14b8aa;
     border-radius: 8px;
     border: none;
@@ -27,28 +29,58 @@ button:hover {
     font-weight: bold;
 }
 
-.upgrades {
-    font-family: 'Open Sans';
+.cookie {
+    font-family: 'Open Sans', sans-serif;
     position: absolute;
-    right: 0px;
+    left: 0px;
     top: 0px;
-    width: 300px;
-    border: 7px solid #dcfff9;
-    padding: 10px;
+    width: 1000;
+    border: 7px solid #36a794;
+    height: 100vh;
+    padding: 50px;
+}
+
+.credits {
+    font-family: 'Open Sans', sans-serif;
+    position:absolute;
+    left: 50%;
+    top: 0;
+    text-align: center;
+}
+
+.info {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    background-color: #11DCBF;
+    border-radius: 8px;
+    width: 250px;
+    border: none;
+    color: white;
+    padding: 6px 0px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .helpers {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     position: absolute;
     right: 0px;
-    top: 125px;
-    width: 300px;
+    top: 0px;
+    width: 450px;
+    text-align: center;
+    height: 100vh;
     border: 7px solid #dcfff9;
     padding: 10px;
 }
 
 .animation-target {
     animation: animation 1500ms linear both;
+    position:relative;
+    top: 75px;
 }
 
 @keyframes animation { 

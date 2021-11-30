@@ -3,15 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Cookie Clicker: 7</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="main.css" rel="stylesheet" type="text/css" >
   </head>
   <body>
-    <h1>Cookie Clicker: 7</h1>
-    <h3>Created By: Az989</h3>
-    <p>Created for a school project.</p>
-    <p><span id = "counter">0</span> Cookies | <span id ="clickPower">1</span> Power | <span id ="cpsCount">0</span> CPS</p>
+
+    <article class="credits">
+      <header class="credits">
+        <h1>Cookie Clicker: 7</h1>
+        <h3>Created By: Az989</h3>
+        <p>Created for a school project.</p>
+      </header>
+    </article>
+
+    <article class="cookie">
+    <p class="info" id="numbers">
+      | <span id = "counter">0</span> Cookies | 
+      <br>
+      | <span id ="clickPower">1</span> Power |
+      <br>
+      | <span id ="cpsCount">0</span> CPS |
+    </p>
     <img src = "images/cookie.png" class = "animation-target" id = "cookie" style = "width: 250px"  onclick = "increment()" />
+    </article>
 
     <article class="helpers">
     <p>
@@ -24,13 +37,17 @@
     <button type="button" onclick = "buyFarm()">Buy Farm</button>
     <p>Farm Price: <span id= "farmCost">250</span> | Farms Owned: <span id= "farms">0</span></p>
     </p>
+    <br>
+    <button type="button" onclick = "buyFactory()">Buy Factory</button>
+    <p>Factory Price: <span id= "factoryCost">800</span> | Factories Owned: <span id= "factories">0</span></p>
+    </p>
     </article>
-
+<!-- 
     <article class="upgrades">
     <p>
     <button type="button" onclick = "buyUpgrade()">Upgrade Mouse</button>
     <p>Upgrade Price: <span id= "upgradePrice">1,000</span></p>
-    </article>
+    </article> -->
 
   </body>
   <script src="scripts/main.js"></script> <!--main code-->

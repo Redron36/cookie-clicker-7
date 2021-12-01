@@ -20,14 +20,16 @@ function increment() { // click cookie make cookie
 function giveCookies(x) {
     cookies = cookies + x;
     counter.innerHTML = cookies;
-    console.log("cheated cookies dont taste good...")
-    cheated = true;
 }
 
-window.setInterval(function updateCPS(){
+function cookiesPerSecond() {
     cps = (clicker * clickerCPS) + (grandma * grandmaCPS) + (farm * farmCPS) + (factory * factoryCPS);
     cpsCount.innerHTML = cps;
     document.getElementById("numbers").style.textAlign = "center";
+};
+
+window.setInterval(function updateCPS(){
+    cookiesPerSecond();
 }, 1000);
 
 document.getElementById('cookie').ondragstart = function() { return false; };

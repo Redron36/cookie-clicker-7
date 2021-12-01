@@ -20,18 +20,32 @@ function priceMult(x){
     return x;
 }
 
-function buyClicker(){ // click button make click stronger
-    if(cookies >= clickerPrice)
+function buy(helper, price, baseprice, webref, costref){
+    if(cookies >= price)
     {
-        clicker = clicker + 1;
-        cookies = cookies - clickerPrice;
-        clickerPrice = priceMult(10) + clickerPrice;
-        console.log("Clickers real cost: " + clickerPrice + " cookies");
-        clickerPrice = Math.round(clickerPrice);
+        helper = helper + 1;
+        cookies = cookies - price;
+        price = priceMult(baseprice) + price;
+        console.log(helper + "real cost: " + price + " cookies");
+        price = Math.round(price);
         counter.innerHTML = cookies;
-        clickers.innerHTML = clicker;
-        clickerCost.innerHTML = clickerPrice;
+        webref.innerHTML = helper;
+        costref.innerHTML = price;
     }
+}
+
+function buyClicker(){ // click button make click stronger
+        if(cookies >= clickerPrice)
+        {
+            clicker = clicker + 1;
+            cookies = cookies - clickerPrice;
+            clickerPrice = priceMult(10) + clickerPrice;
+            console.log("Clickers real cost: " + clickerPrice + " cookies");
+            clickerPrice = Math.round(clickerPrice);
+            counter.innerHTML = cookies;
+            clickers.innerHTML = clicker;
+            clickerCost.innerHTML = clickerPrice;
+        }
 }
 
 function buyGrandma(){ // click button make click stronger

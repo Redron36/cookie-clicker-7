@@ -8,7 +8,10 @@
     <meta name="keywords" content="cookies, clicking, seven, idle, game, project, fun" >
     <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
-  <body>
+  <body onload="load()">
+
+    <button class="load" type="button" onclick = "save()">Save Progress.</button>
+    <button class="save" type="button" onclick = "load()">Load Progress.</button>
 
     <article class="credits">
       <header class="credits">
@@ -56,4 +59,5 @@
   <script src="scripts/main.js"></script> <!--main code-->
   <script src="scripts/helper.js"></script> <!--code for helpers--> 
   <script src="scripts/upgrade.js"></script> <!--code for mouse upgrade-->
+  <script src="scripts/save.js"></script> <!--code for saving your progress-->
 </html>

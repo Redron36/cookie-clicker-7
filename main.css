@@ -31,6 +31,18 @@ button:hover {
     font-weight: bold;
 }
 
+.save {
+   position: absolute;
+   left: 50%;
+   bottom: 25px;
+}
+
+.load {
+    position: absolute;
+    left: 50%;
+    bottom: 75px;
+ }
+
 .cookie {
     font-family: 'Open Sans', sans-serif;
     position: absolute;

@@ -1,0 +1,18 @@
+{
+    "data": [
+        {
+            "type": "cookies", 
+            "value": 17
+        },
+
+        {
+            "type": "clickers",
+            "value": 21
+        },
+
+        {
+            "type": "grandmas",
+            "value": 0
+        }
+    ]
+}

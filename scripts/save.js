@@ -25,7 +25,8 @@ function save() {
       window.alert('Data Saved.');
   }
 
-  window.setInterval(function autosave(){
+  window.onbeforeunload = closingCode;
+  function closingCode(){
     save();
-    window.alert('Autosave Completed.');
-}, 300000);
+     return null;
+  }

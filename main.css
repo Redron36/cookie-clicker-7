@@ -32,12 +32,6 @@ button:hover {
 }
 
 .save {
-   position: absolute;
-   left: 50%;
-   bottom: 25px;
-}
-
-.load {
     position: absolute;
     left: 50%;
     bottom: 75px;

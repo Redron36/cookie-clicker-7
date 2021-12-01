@@ -15,12 +15,17 @@ var factoryCPS = 25;
 
 var costMult = 1.5;
 
+function priceMult(x){
+    x = x * costMult;
+    return x;
+}
+
 function buyClicker(){ // click button make click stronger
     if(cookies >= clickerPrice)
     {
         clicker = clicker + 1;
         cookies = cookies - clickerPrice;
-        clickerPrice = clickerPrice * costMult;
+        clickerPrice = priceMult(10) + clickerPrice;
         console.log("Clickers real cost: " + clickerPrice + " cookies");
         clickerPrice = Math.round(clickerPrice);
         counter.innerHTML = cookies;
@@ -34,7 +39,7 @@ function buyGrandma(){ // click button make click stronger
     {
         grandma = grandma + 1;
         cookies = cookies - grandmaPrice;
-        grandmaPrice =  grandmaPrice * costMult;
+        grandmaPrice = priceMult(100) + grandmaPrice;
         console.log("Grandmas real cost: " + grandmaPrice + " cookies");
         grandmaPrice = Math.round(grandmaPrice);
         counter.innerHTML = cookies;
@@ -48,7 +53,7 @@ function buyFarm(){ // click button make click stronger
     {
         farm = farm + 1;
         cookies = cookies - farmPrice;
-        farmPrice =  farmPrice * costMult;
+        farmPrice = priceMult(250) + farmPrice;
         console.log("Farms real cost: " + farmPrice + " cookies");
         farmPrice = Math.round(farmPrice);
         counter.innerHTML = cookies;
@@ -62,7 +67,7 @@ function buyFactory(){ // click button make click stronger
     {
         factory = factory + 1;
         cookies = cookies - factoryPrice;
-        factoryPrice = factoryPrice * costMult;
+        factoryPrice = priceMult(800) + farmPrice;
         console.log("Factories real cost: " + factoryPrice + " cookies");
         factoryPrice = Math.round(factoryPrice);
         counter.innerHTML = cookies;

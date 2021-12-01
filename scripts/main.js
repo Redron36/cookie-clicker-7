@@ -15,9 +15,10 @@ function increment() { // click cookie make cookie
     document.getElementById("numbers").style.textAlign = "center";
 }
 
-function giveCookies() {
-    cookies = cookies + 100000000000;
+function giveCookies(x) {
+    cookies = cookies + x;
     counter.innerHTML = cookies;
+    console.log("cheated cookies dont taste good...")
 }
 
 window.setInterval(function updateCPS(){

@@ -25,7 +25,7 @@ function giveCookies(x) {
 }
 
 window.setInterval(function updateCPS(){
-    cps = (clicker * clickerCPS) + (grandma * grandmaCPS) + (farm * farmCPS);
+    cps = (clicker * clickerCPS) + (grandma * grandmaCPS) + (farm * farmCPS) + (factory * factoryCPS);
     cpsCount.innerHTML = cps;
     document.getElementById("numbers").style.textAlign = "center";
 }, 1000);

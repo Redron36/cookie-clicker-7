@@ -22,7 +22,6 @@ function giveCookies(x) {
     counter.innerHTML = cookies;
     console.log("cheated cookies dont taste good...")
     cheated = true;
-    stinkyCheater();
 }
 
 window.setInterval(function updateCPS(){
@@ -33,10 +32,3 @@ window.setInterval(function updateCPS(){
 
 document.getElementById('cookie').ondragstart = function() { return false; };
 document.getElementsByClassName('helpers').ondragstart = function() { return false; };
-
-function stinkyCheater(){
-    if(cheated){
-        window.location.replace("cheated.html");
-    }
-}
-    

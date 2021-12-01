@@ -67,7 +67,7 @@ function buyFactory(){ // click button make click stronger
     {
         factory = factory + 1;
         cookies = cookies - factoryPrice;
-        factoryPrice = priceMult(800) + farmPrice;
+        factoryPrice = priceMult(800) + factoryPrice;
         console.log("Factories real cost: " + factoryPrice + " cookies");
         factoryPrice = Math.round(factoryPrice);
         counter.innerHTML = cookies;

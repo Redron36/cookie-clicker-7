@@ -13,6 +13,11 @@ function save() {
     farm = JSON.parse(localStorage.getItem('farms'));
     factory = JSON.parse(localStorage.getItem('factories'));
     window.alert('Data Loaded.');
+    innerHTML.counter = cookies;
+    innerHTML.clickers = clicker;
+    innerHTML.grandmas = grandma;
+    innerHTML.farms = farm;
+    innerHTML.factories = factory;
   }
 
   window.setInterval(function autosave(){

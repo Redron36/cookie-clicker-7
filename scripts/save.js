@@ -13,13 +13,19 @@ function save() {
     farm = JSON.parse(localStorage.getItem('farms'));
     factory = JSON.parse(localStorage.getItem('factories'));
     window.alert('Data Loaded.');
-    innerHTML.counter = cookies;
-    innerHTML.clickers = clicker;
-    innerHTML.grandmas = grandma;
-    innerHTML.farms = farm;
-    innerHTML.factories = factory;
+    counter.innerHTML = cookies;
+    clickers.innerHTML = clicker;
+    grandmas.innerHTML = grandma;
+    farms.innerHTML = farm;
+    factories.innerHTML = factory;
+  }
+
+  function manualSave() {
+      save();
+      window.alert('Data Saved.');
   }
 
   window.setInterval(function autosave(){
     save();
+    window.alert('Autosave Completed.');
 }, 300000);

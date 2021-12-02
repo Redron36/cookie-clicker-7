@@ -14,7 +14,6 @@ function increment() { // click cookie make cookie
 
     cookies = cookies + power;
     counter.innerHTML = cookies;
-    document.getElementById("numbers").style.textAlign = "center";
 }
 
 function giveCookies(x) {
@@ -25,7 +24,6 @@ function giveCookies(x) {
 function cookiesPerSecond() {
     cps = (clicker * clickerCPS) + (grandma * grandmaCPS) + (farm * farmCPS) + (factory * factoryCPS);
     cpsCount.innerHTML = cps;
-    document.getElementById("numbers").style.textAlign = "center";
 };
 
 window.setInterval(function updateCPS(){

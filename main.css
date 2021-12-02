@@ -2,93 +2,63 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-button {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #11DCBF;
-    border-radius: 8px;
-    border: none;
-    color: white;
-    padding: 6px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    transition-duration: 0.2s;
-}
-
-button:hover {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #14b8aa;
-    border-radius: 8px;
-    border: none;
-    color: white;
-    padding: 6px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.save {
-    position: absolute;
-    left: 50%;
-    bottom: 75px;
- }
-
-.cookie {
-    font-family: 'Open Sans', sans-serif;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 1000;
-    border: 7px solid #36a794;
-    height: 100%;
-    padding: 0px 50px;
+.animation-target {
+    animation: animation 1500ms linear both;
+    position: relative;
+    padding: 25px;
 }
 
 .credits {
     font-family: 'Open Sans', sans-serif;
-    position:absolute;
-    left: 50%;
-    top: 0;
+    font-weight: bold;
+    position: relative;
     text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10;
+    background-color: #009999;
+    border-radius: 8px;
+    padding: 2px 0px;
+    color: white;
 }
 
-.info {
+.cookie {
+    position:relative;
+    top: 25px;
     font-family: 'Open Sans', sans-serif;
-    position: absolute;
-    top: 15;
-    text-align: center;
-    background-color: #11DCBF;
-    border-radius: 8px;
-    width: 250px;
-    border: none;
-    color: white;
-    padding: 6px 0px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
     font-weight: bold;
+    text-align: center;
+    border: solid;
+    border-width: 10px;
+    border-color: yellow;
+    border-radius: 12px;
+}
+
+.save {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10;
+    top:15px;
+    padding: 60px;
 }
 
 .helpers {
     font-family: 'Open Sans', sans-serif;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 350px;
+    font-weight: bold;
+    position: relative;
     text-align: center;
-    height: 100%;
-    border: 7px solid #dcfff9;
-    padding: 0px 50px;
-}
-
-.animation-target {
-    animation: animation 1500ms linear both;
-    position:relative;
-    top: 175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10;
+    bottom:0px;
+    padding: 50px;
 }
 
 @keyframes animation { 

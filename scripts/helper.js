@@ -20,7 +20,7 @@ function priceMult(x){
     return x;
 }
 
-function buy(helper, price, baseprice, webref, costref){
+function buy(helper, price, baseprice, webref, costref){ //doesnt work, might come back to this later
     if(cookies >= price)
     {
         helper = helper + 1;
@@ -31,6 +31,7 @@ function buy(helper, price, baseprice, webref, costref){
         counter.innerHTML = cookies;
         webref.innerHTML = helper;
         costref.innerHTML = price;
+        document.getElementById("helpers").style.textAlign = "center";
     }
 }
 

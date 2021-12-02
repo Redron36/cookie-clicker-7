@@ -10,10 +10,8 @@
   </head>
   <body onload="load()">
 
-    <button class="save" type="button" onclick = "manualSave()">Save Progress.</button>
-
     <article class="credits">
-      <header class="credits">
+      <header>
         <h1>Cookie Clicker: 7</h1>
         <h3>Created By: Az989</h3>
         <p>Created for a school project.</p>
@@ -31,22 +29,33 @@
     <img src = "images/cookie.png" class = "animation-target" id = "cookie" style = "width: 250px"  onclick = "increment()" />
     </article>
 
-    <article class="helpers">
-    <p>
-    <button type="button" onclick = "buyClicker()">Buy Clicker</button>
+    <article class="helpers" id="helpers">
+
     <p>Clicker Price: <span id= "clickerCost">10</span> | Clickers Owned: <span id= "clickers">0</span></p>
-    <br>
-    <button type="button" onclick = "buyGrandma()">Buy Grandma</button>
+    <button type="button" onclick = "buyClicker()">Buy Clicker</button>
+    <br>  
+
     <p>Grandma Price: <span id= "grandmaCost">100</span> | Grandmas Owned: <span id= "grandmas">0</span></p>
-    <br>
-    <button type="button" onclick = "buyFarm()">Buy Farm</button>
+    <button type="button" onclick = "buyGrandma()">Buy Grandma</button>
+    
+
     <p>Farm Price: <span id= "farmCost">250</span> | Farms Owned: <span id= "farms">0</span></p>
-    </p>
+    <button type="button" onclick = "buyFarm()">Buy Farm</button>
     <br>
-    <button type="button" onclick = "buyFactory()">Buy Factory</button>
+
     <p>Factory Price: <span id= "factoryCost">800</span> | Factories Owned: <span id= "factories">0</span></p>
-    </p>
+    <button type="button" onclick = "buyFactory()">Buy Factory</button>
+    <br>
     </article>
+
+    <article class="save">
+    <button type="button" onclick = "manualSave()">Save Progress.</button>
+    <br>
+    <br>
+    <br>
+    <button type="button" onclick = "deleteChoice()">Delete Save.</button>
+    </article>  
+    
 <!-- 
     <article class="upgrades">
     <p>

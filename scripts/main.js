@@ -3,6 +3,8 @@ var cookies = 0;
 var power = 1;
 var cps = 0;
 
+var music = document.getElementById("musica");
+
 var cheated = false;
 
 function increment() { // click cookie make cookie
@@ -30,6 +32,18 @@ function cookiesPerSecond() {
 window.setInterval(function updateCPS(){
     cookiesPerSecond();
 }, 1);
+
+function autoPlay() {
+    setTimeout(() => {  playMusic(); }, 2500);
+}
+
+function playMusic() {
+    music.play();
+}
+
+function pauseMusic() {
+    music.pause();
+}
 
 document.getElementById('cookie').ondragstart = function() { return false; };
 document.getElementsByClassName('helpers').ondragstart = function() { return false; };

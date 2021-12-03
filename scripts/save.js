@@ -17,6 +17,7 @@ function save() {
   }
   
   function load() {
+    autoPlay();
     cookies = JSON.parse(localStorage.getItem('cookies'));
     clicker = JSON.parse(localStorage.getItem('clickers'));
     grandma = JSON.parse(localStorage.getItem('grandmas'));

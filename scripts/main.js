@@ -29,7 +29,7 @@ function cookiesPerSecond() {
 
 window.setInterval(function updateCPS(){
     cookiesPerSecond();
-}, 1000);
+}, 1);
 
 document.getElementById('cookie').ondragstart = function() { return false; };
 document.getElementsByClassName('helpers').ondragstart = function() { return false; };

@@ -8,6 +8,59 @@
     padding: 25px;
 }
 
+button {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-shadow: 0px 2px #9f6138; 
+    color: #4b2d1a;
+    background-color: #cc935e;
+    border: 10px solid;
+    border-radius: 25px;
+    padding: 2px 5px;
+    font-size: 15px;
+    border-color: #9f6138;
+    border-right-color: #4b2d1a;
+    border-bottom-color: #4b2d1a;
+    border-width: 5px;
+}
+
+button:hover {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-shadow: 0px 2px #9f6138; 
+    color: #4b2d1a;
+    background-color: #e4a76e;
+    border: 8px solid;
+    border-radius: 25px;
+    padding: 2px 5px;
+    font-size: 15px;
+    border-color: #9f6138;
+    border-right-color: #4b2d1a;
+    border-bottom-color: #4b2d1a;
+    border-width: 5px;
+    transition: 125ms;
+}
+
+button:active {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-shadow: 0px 2px #9f6138; 
+    color: #4b2d1a;
+    background-color: rgb(197, 139, 84);
+    border: 8px solid;
+    border-radius: 25px;
+    padding: 2px 5px;
+    font-size: 15px;
+    border-color: #9f6138;
+    border-right-color: #4b2d1a;
+    border-bottom-color: #4b2d1a;
+    border-width: 5px;
+    transition: 0ms;
+}
+
 .credits {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -31,8 +84,14 @@
     text-align: center;
     border: solid;
     border-width: 10px;
-    border-color: yellow;
+    width: fit-content;
+    border-color: #9f6138;
+    border-right-color: #4b2d1a;
+    border-bottom-color: #4b2d1a;
     border-radius: 12px;
+    min-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .save {
@@ -59,6 +118,25 @@
     width: 10;
     bottom:0px;
     padding: 50px;
+    border-color: #9f6138;
+    border-right-color: #4b2d1a;
+    border-bottom-color: #4b2d1a;
+}
+
+.info {
+    background-color: #cc935e;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 5px 25px;
+    border: 7.5px solid;
+    border-color: #9f6138;
+    border-right-color: #4b2d1a;
+    border-bottom-color: #4b2d1a;
+    color: #4b2d1a;
+    text-shadow: 0px 2px #9f6138; 
 }
 
 @keyframes animation { 

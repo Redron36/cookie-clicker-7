@@ -19,6 +19,7 @@ function increment() { // click cookie make cookie
 function giveCookies(x) {
     cookies = cookies + x;
     counter.innerHTML = cookies;
+    cheated = true;
 }
 
 function cookiesPerSecond() {

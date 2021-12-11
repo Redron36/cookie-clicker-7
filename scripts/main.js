@@ -3,7 +3,7 @@ var cookies = 0;
 var power = 1;
 var cps = 0;
 
-var music = document.getElementById("musica");
+var music = document.getElementById("music");
 
 var cheated = false;
 
@@ -27,6 +27,7 @@ function giveCookies(x) {
 function cookiesPerSecond() {
     cps = (clicker * clickerCPS) + (grandma * grandmaCPS) + (farm * farmCPS) + (factory * factoryCPS);
     cpsCount.innerHTML = cps;
+    return cps;
 };
 
 window.setInterval(function updateCPS(){
@@ -39,6 +40,7 @@ function autoPlay() {
 
 function playMusic() {
     music.play();
+    music.volume = 0.25;
 }
 
 function pauseMusic() {

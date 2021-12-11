@@ -1,5 +1,15 @@
-var zero = 0;
-var no = false;
+function nullFix(x, y) { 
+  if (JSON.parse(localStorage.getItem(x)) === null)
+  {
+    y = y + 0;
+  }
+  else
+  {
+    y = JSON.parse(localStorage.getItem(x));
+  }
+  
+  return y;
+}
 
 function save() {
     localStorage.setItem('cookies', JSON.stringify(cookies));
@@ -16,22 +26,22 @@ function save() {
     localStorage.setItem('cheated', JSON.stringify(cheated)); 
   }
   
-  function load() {
+  function load(message) {
     autoPlay();
-    cookies = JSON.parse(localStorage.getItem('cookies'));
-    clicker = JSON.parse(localStorage.getItem('clickers'));
-    grandma = JSON.parse(localStorage.getItem('grandmas'));
-    farm = JSON.parse(localStorage.getItem('farms'));
-    factory = JSON.parse(localStorage.getItem('factories'));
+    cookies = nullFix('cookies', cookies);
+    clicker = nullFix('clickers', clicker);
+    grandma = nullFix('grandmas', grandma);
+    farm = nullFix('farms', farm);
+    factory = nullFix('factories', factory);
 
-    clickerPrice = JSON.parse(localStorage.getItem('clickerCost'));
-    grandmaPrice = JSON.parse(localStorage.getItem('grandmaCost'));
-    farmPrice = JSON.parse(localStorage.getItem('farmCost'));
-    factoryPrice = JSON.parse(localStorage.getItem('factoryCost'));
+    clickerPrice = nullFix('clickerCost', clickerPrice);
+    grandmaPrice = nullFix('grandmaCost', grandmaPrice);
+    farmPrice = nullFix('farmCost', farmPrice);
+    factoryPrice = nullFix('factoryCost', factoryPrice);
 
     cheated = JSON.parse(localStorage.getItem('cheated'));
 
-    window.alert('Data Loaded.');
+    window.alert(message);
 
     counter.innerHTML = cookies;
     clickers.innerHTML = clicker;
@@ -50,52 +60,33 @@ function save() {
       if (choice)
       {
           deleteSave();
-          window.alert("Save data deleted.");
       }
   }
 
   function deleteSave() {
-    localStorage.setItem('cookies', JSON.stringify(zero));
-    localStorage.setItem('clickers', JSON.stringify(zero));
-    localStorage.setItem('grandmas', JSON.stringify(zero));
-    localStorage.setItem('farms', JSON.stringify(zero));
-    localStorage.setItem('factories', JSON.stringify(zero));
+    localStorage.setItem('cookies', JSON.stringify(0));
+    localStorage.setItem('clickers', JSON.stringify(0));
+    localStorage.setItem('grandmas', JSON.stringify(0));
+    localStorage.setItem('farms', JSON.stringify(0));
+    localStorage.setItem('factories', JSON.stringify(0));
 
-    localStorage.setItem('cheated', JSON.stringify(no)); 
+    localStorage.setItem('cheated', JSON.stringify(false)); 
 
     localStorage.setItem('clickerCost', JSON.stringify(10));
     localStorage.setItem('grandmaCost', JSON.stringify(100));
     localStorage.setItem('farmCost', JSON.stringify(250));
     localStorage.setItem('factoryCost', JSON.stringify(800));
 
-    cookies = JSON.parse(localStorage.getItem('cookies'));
-    clicker = JSON.parse(localStorage.getItem('clickers'));
-    grandma = JSON.parse(localStorage.getItem('grandmas'));
-    farm = JSON.parse(localStorage.getItem('farms'));
-    factory = JSON.parse(localStorage.getItem('factories'));
-
-    cheated = JSON.parse(localStorage.getItem('cheated'));
-
-    clickerPrice = JSON.parse(localStorage.getItem('clickerCost'));
-    grandmaPrice = JSON.parse(localStorage.getItem('grandmaCost'));
-    farmPrice = JSON.parse(localStorage.getItem('farmCost'));
-    factoryPrice = JSON.parse(localStorage.getItem('factoryCost'));
-
-    counter.innerHTML = cookies;
-    clickers.innerHTML = clicker;
-    grandmas.innerHTML = grandma;
-    farms.innerHTML = farm;
-    factories.innerHTML = factory;
-
-    clickerCost.innerHTML = clickerPrice;
-    grandmaCost.innerHTML = grandmaPrice;
-    farmCost.innerHTML = farmPrice;
-    factoryCost.innerHTML = factoryPrice;
+    load('Data reset.');
   }
 
   function manualSave() {
       save();
-      window.alert('Data Saved.');
+      window.alert('Data saved.');
+  }
+
+  function autoLoad() {
+    load('Data loaded.');
   }
 
   window.onbeforeunload = closingCode;

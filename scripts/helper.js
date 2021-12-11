@@ -15,24 +15,9 @@ var factoryCPS = 25;
 
 var costMult = 1.5;
 
-function priceMult(x){
-    x = x * costMult;
-    return x;
-}
-
-function buy(helper, price, baseprice, webref, costref){ //doesnt work, might come back to this later
-    if(cookies >= price)
-    {
-        helper = helper + 1;
-        cookies = cookies - price;
-        price = priceMult(baseprice) + price;
-        console.log(helper + "real cost: " + price + " cookies");
-        price = Math.round(price);
-        counter.innerHTML = cookies;
-        webref.innerHTML = helper;
-        costref.innerHTML = price;
-        document.getElementById("helpers").style.textAlign = "center";
-    }
+function priceMult(baseprice){
+    baseprice = baseprice * costMult;
+    return baseprice;
 }
 
 function buyClicker(){ // click button make click stronger
@@ -91,26 +76,7 @@ function buyFactory(){ // click button make click stronger
     }
 }
 
-window.setInterval(function clickerBake(){
-    cookies = cookies + (clickerCPS * clicker);
+window.setInterval(function bake(){
+    cookies = cookies + cookiesPerSecond();
     counter.innerHTML = cookies;
-
-}, 1000);
-
-window.setInterval(function grandmaBake(){
-    cookies = cookies + (grandmaCPS * grandma);
-    counter.innerHTML = cookies;
-
-}, 1000);
-
-window.setInterval(function farmBake(){
-    cookies = cookies + (farmCPS * farm);
-    counter.innerHTML = cookies;
-
-}, 1000);
-
-window.setInterval(function factoryBake(){
-    cookies = cookies + (factoryCPS * factory);
-    counter.innerHTML = cookies;
-
-}, 1000);
+}, 1000)

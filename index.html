@@ -8,11 +8,11 @@
     <meta name="keywords" content="cookies, clicking, seven, idle, game, project, fun" >
     <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
-  <body onload="load()">
+  <body onload="autoLoad()" oncontextmenu="return false;">
 
-    <audio id="musica" loop>
-      <source src="sounds/music.mp3" type="audio/mp3">
-      <source src="sounds/music.ogg" type="audio/ogg">
+    <audio id="music" loop>
+      <source src="sounds/music_new.mp3" type="audio/mp3">
+      <source src="sounds/music_new.ogg" type="audio/ogg">
     Your browser doesn't support the audio element.
     </audio>
 
@@ -25,7 +25,20 @@
     </article>
 
     <article class="cookie">
-    <p class="info" id="numbers">
+      <div class="wrapper">
+        <style>
+          .wrapper {
+            background-color: #f5f3f0;
+          }
+        </style>
+        <div class="wave"></div>
+      </div>
+
+      <div id="news_flash">
+        You feel like making cookies.
+      </div>
+
+      <p class="info" id="numbers">
       | <span id = "counter">0</span> Cookies | 
       <br>
       | <span id ="clickPower">1</span> Power |
@@ -35,6 +48,7 @@
     <img src = "images/cookie.png" class = "animation-target" id = "cookie" style = "width: 250px"  onclick = "increment()" />
     </article>
 
+    <div class="container">
     <article class="helpers" id="helpers">
 
     <p>Clicker Price: <span id= "clickerCost">10</span> | Clickers Owned: <span id= "clickers">0</span></p>
@@ -53,6 +67,7 @@
     <button type="button" onclick = "buyFactory()">Buy Factory</button>
     <br>
     </article>
+    </div>
 
     <article class="save">
     <button type="button" onclick = "manualSave()">Save Progress.</button>
@@ -64,7 +79,6 @@
     <br>
     <br>
     <button type="button" onclick = "qualify()">Check if you qualify for the challenge.</button>
-    </article>  
     
 <!-- 
     <article class="upgrades">
@@ -74,13 +88,20 @@
     </article> -->
 
   </body>
+  
+  <script src="scripts/require.js"></script>
+
+  <script type="module" src="scripts/import.js"></script>
+
   <script src="scripts/main.js"></script> <!--main code-->
   <script src="scripts/helper.js"></script> <!--code for helpers--> 
   <script src="scripts/upgrade.js"></script> <!--code for mouse upgrade-->
   <script src="scripts/save.js"></script> <!--code for saving your progress-->
   <script src="scripts/secret.js"></script> <!--code for secrets-->
   <script src="scripts/100m.js"></script> <!--code for challenge-->
-  <script src="scripts/sounds.js"></script> <!--code for sounds n music-->
+  <script src="scripts/news.js"></script> <!--code for news-->
+  <script src="scripts/milk.js"></script> <!--code for yummy delicious milk mmm-->
+
   <noscript>
     Looks like your browser can't run this game... cry about it <!--cope :)-->
   </noscript>
